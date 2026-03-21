@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genesis of a 144A Offer | Honeywell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0A1628;
+    --navy-mid:   #112240;
+    --navy-light: #1C3557;
+    --red:        #C8102E;
+    --red-muted:  #9B1324;
+    --gold:       #B8962E;
+    --gold-light: #D4AF4A;
+    --white:      #FFFFFF;
+    --off-white:  #F5F4F0;
+    --gray-100:   #ECEAE4;
+    --gray-300:   #C2BEB4;
+    --gray-500:   #8A8478;
+    --gray-700:   #4A4640;
+    --text-body:  #2C2A26;
+    --rule:       rgba(184,150,46,0.3);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    color: var(--text-body);
+    background: var(--off-white);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--red);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .header-brand {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+  }
+  .header-brand span {
+    color: var(--gold-light);
+  }
+  nav {
+    display: flex;
+    gap: 28px;
+  }
+  nav a {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--gold-light); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 80px 24px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 119px,
+      rgba(255,255,255,0.025) 119px,
+      rgba(255,255,255,0.025) 120px
+    );
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-label::after {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--red);
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gray-300);
+    margin-bottom: 40px;
+    max-width: 680px;
+    line-height: 1.6;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .hero-meta-item label {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 4px;
+  }
+  .hero-meta-item span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-300);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .content-col {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    padding: 72px 24px;
+  }
+  section:nth-child(even) {
+    background: var(--white);
+  }
+  section:nth-child(odd) {
+    background: var(--off-white);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--red);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .section-intro {
+    font-family: 'Source Serif 4', serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--gray-700);
+    margin-bottom: 40px;
+    line-height: 1.7;
+    max-width: 700px;
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+  }
+
+  p {
+    font-size: 15.5px;
+    color: var(--text-body);
+    margin-bottom: 18px;
+    line-height: 1.75;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  /* ── STAT CARDS ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2px;
+    margin: 40px 0;
+    background: var(--gray-300);
+  }
+  .stat-card {
+    background: var(--navy);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .stat-card .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-card .label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    line-height: 1.4;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    background: var(--navy);
+    border-left: 4px solid var(--gold);
+    padding: 32px 36px;
+    margin: 40px 0;
+  }
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(16px, 2vw, 20px);
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .pull-quote cite {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-style: normal;
+  }
+
+  /* ── TRANSACTION BOX ── */
+  .tx-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+    margin: 40px 0;
+    background: var(--gray-300);
+  }
+  .tx-card {
+    background: var(--white);
+    padding: 32px 28px;
+    position: relative;
+  }
+  .tx-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gray-100);
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+  .tx-card h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+  .tx-card strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .tx-card p {
+    font-size: 13.5px;
+    color: var(--gray-700);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── CAPITAL FLOW DIAGRAM ── */
+  .flow-wrapper {
+    margin: 48px 0;
+    overflow-x: auto;
+  }
+  .flow-diagram {
+    min-width: 300px;
+    width: 100%;
+  }
+  .flow-node {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 0;
+    padding: 18px 22px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .flow-node.accent {
+    background: var(--red);
+  }
+  .flow-node.gold {
+    background: var(--gold);
+  }
+  .flow-node.light {
+    background: var(--navy-light);
+  }
+  .flow-node .node-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 4px;
+  }
+  .flow-node .node-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .flow-node.gold .node-label { color: rgba(10,22,40,0.6); }
+  .flow-node.gold .node-title { color: var(--navy); }
+
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0;
+  }
+  .flow-arrow-line {
+    width: 2px;
+    height: 28px;
+    background: var(--gold);
+    margin: 0 auto;
+    position: relative;
+  }
+  .flow-arrow-line::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--gold);
+  }
+  .flow-arrow-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+
+  .flow-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flow-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 2px;
+  }
+  .flow-split-arrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 10px 0;
+  }
+  .flow-split-arrow .arrow-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .arrow-col .flow-arrow-line {
+    width: 2px;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 32px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--navy), var(--red), var(--gold));
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -28px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--gold);
+  }
+  .timeline-dot.completed {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .timeline-dot.active {
+    background: var(--red);
+    border-color: var(--red);
+    box-shadow: 0 0 0 4px rgba(200,16,46,0.15);
+  }
+  .timeline-dot.future {
+    background: var(--off-white);
+    border-color: var(--gold);
+  }
+  .timeline-date {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+  .timeline-title {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .timeline-desc {
+    font-size: 14px;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .timeline-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+  }
+  .tag-completed { background: var(--navy); color: var(--gray-300); }
+  .tag-active { background: var(--red); color: var(--white); }
+  .tag-pending { background: var(--gold); color: var(--navy); }
+
+  /* ── WHAT'S NEXT ── */
+  .next-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px;
+    background: var(--gray-300);
+    margin: 40px 0;
+  }
+  .next-card {
+    background: var(--white);
+    padding: 32px 28px;
+    border-top: 3px solid transparent;
+  }
+  .next-card.step-1 { border-top-color: var(--navy); }
+  .next-card.step-2 { border-top-color: var(--red); }
+  .next-card.step-3 { border-top-color: var(--gold); }
+  .next-card.step-4 { border-top-color: var(--navy-light); }
+  .next-card h4 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+  }
+  .next-card strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.35;
+  }
+  .next-card p {
+    font-size: 13.5px;
+    color: var(--gray-700);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── DARK SECTION ── */
+  .section-dark {
+    background: var(--navy) !important;
+  }
+  .section-dark h2 { color: var(--white); }
+  .section-dark .section-label { color: var(--gold-light); }
+  .section-dark .section-label::before { background: var(--gold-light); }
+  .section-dark .section-intro {
+    color: var(--gray-300);
+    border-left-color: var(--red);
+  }
+  .section-dark p { color: var(--gray-300); }
+  .section-dark h3 { color: var(--gold-light); }
+
+  /* ── DIVIDER ── */
+  .rule {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin: 32px 0;
+  }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    font-size: 13.5px;
+  }
+  .data-table th {
+    background: var(--navy);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--text-body);
+    vertical-align: top;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--off-white); }
+
+  /* ── INSIGHT BOX ── */
+  .insight {
+    background: var(--off-white);
+    border: 1px solid var(--gray-100);
+    border-left: 4px solid var(--navy);
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .insight-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .insight p {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-mid);
+    border-top: 2px solid var(--red);
+    padding: 40px 24px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .footer-credit {
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+  .footer-credit strong {
+    display: block;
+    font-size: 14px;
+    color: var(--gray-300);
+    margin-bottom: 4px;
+  }
+  .footer-credit span {
+    font-size: 11px;
+    color: var(--gray-500);
+  }
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 18px;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: var(--gray-300);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .linkedin-link:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold-light);
+    color: var(--gold-light);
+  }
+  .linkedin-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  .footer-disclaimer {
+    width: 100%;
+    font-size: 11px;
+    color: var(--gray-500);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 16px;
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ATTRIBUTION ── */
+  .header-attribution {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    padding-left: 20px;
+    margin-left: 8px;
+  }
+  .header-attribution-text {
+    text-align: right;
+  }
+  .header-attribution-text .attr-label {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 2px;
+  }
+  .header-attribution-text .attr-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-300);
+    letter-spacing: 0.04em;
+  }
+  .header-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gray-500);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .header-linkedin:hover { color: var(--gold-light); }
+  .header-linkedin svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  /* ── NAV MOBILE HIDE ── */
+  @media (max-width: 860px) {
+    .header-attribution { display: none; }
+  }
+  @media (max-width: 680px) {
+    nav { display: none; }
+    .hero { padding: 56px 20px 52px; }
+    section { padding: 52px 20px; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .tx-grid { grid-template-columns: 1fr; }
+    .next-grid { grid-template-columns: 1fr; }
+    .flow-split { grid-template-columns: 1fr; }
+    .flow-split-arrow { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .pull-quote { padding: 24px 20px; }
+    .data-table { font-size: 12px; }
+    .data-table th, .data-table td { padding: 10px 12px; }
+  }
+  @media (max-width: 400px) {
+    .stat-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">Corporate Actions <span>/ Capital Markets Analysis</span></div>
+    <nav>
+      <a href="#context">Context</a>
+      <a href="#transactions">Transactions</a>
+      <a href="#capital-flow">Capital Flow</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#whats-next">What's Next</a>
+    </nav>
+    <div class="header-attribution">
+      <div class="header-attribution-text">
+        <span class="attr-label">Prepared by</span>
+        <span class="attr-name">Ted Nawrocki</span>
+      </div>
+      <a class="header-linkedin" href="https://www.linkedin.com/in/tednawrockinyc/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Honeywell International / HON</div>
+    <h1>Genesis of a<br><em>144A Exchange Offer</em></h1>
+    <p class="hero-subtitle">
+      How a strategic spinoff, a liability management tender, and a $16 billion debt issuance converge to create a corporate actions event that will land on desks across the industry in 2027.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <label>Subject</label>
+        <span>Honeywell Aerospace Separation</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Instruments</label>
+        <span>Senior Notes / Tender Offer / Spinoff</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Total Debt Issuance</label>
+        <span>$16.0 Billion</span>
+      </div>
+      <div class="hero-meta-item">
+        <label>Prepared</label>
+        <span>March 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1: THE PREMISE -->
+<section id="context">
+  <div class="content-col">
+    <div class="section-label">Strategic Context</div>
+    <h2>A Conglomerate Reaches Its Limits</h2>
+    <p class="section-intro">
+      The transactions examined here did not begin in a capital markets meeting. They began with a strategic question that Honeywell's board could no longer defer: does this structure still serve shareholders?
+    </p>
+
+    <p>Honeywell International spent decades building a portfolio that spanned aerospace propulsion, industrial automation, building controls, and specialty chemicals. The logic of the conglomerate, cross-subsidized capital allocation, diversified earnings, and operational leverage across shared services, served the company well through much of its history. By 2019, however, that logic had inverted. The portfolio, far from commanding a premium, had become the source of a persistent valuation discount.</p>
+
+    <p>The company's stock gained approximately 28% over the five years through late 2024. The S&P 500 gained 94% over the same period. Honeywell was not underperforming operationally in any single business. The problem was structural. Capital markets could not efficiently price a single equity instrument that simultaneously represented the growth profile of an aerospace and defense supplier, the cyclicality of an industrial automation company, and the margin characteristics of a specialty chemicals producer.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="value">28%</div>
+        <div class="label">HON stock gain<br>2019 to 2024</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">94%</div>
+        <div class="label">S&P 500 gain<br>same period</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">25%</div>
+        <div class="label">Discount vs.<br>aerospace peers</div>
+      </div>
+      <div class="stat-card">
+        <div class="value">3</div>
+        <div class="label">Independent companies<br>post-separation</div>
+      </div>
+    </div>
+
+    <h3>The Elliott Catalyst</h3>
+    <p>In November 2024, Elliott Investment Management disclosed a position exceeding $5 billion in Honeywell, making it the firm's largest single investment at the time. Elliott's letter to the board was direct: the conglomerate structure that once suited Honeywell no longer did. Separating Aerospace and Automation into independent companies could unlock share price appreciation of 51% to 75% over two years. The arithmetic rested on a straightforward sum-of-the-parts analysis: each business, priced against focused pure-play comparables rather than blended conglomerate multiples, would command a higher valuation independently than within the consolidated entity.</p>
+
+    <div class="pull-quote">
+      <p>"The conglomerate structure that once suited Honeywell no longer does."</p>
+      <cite>Elliott Investment Management, Letter to Honeywell Board, November 2024</cite>
+    </div>
+
+    <p>What distinguished this engagement from a typical activist campaign was the alignment between Elliott's public argument and the direction Honeywell's own CEO was already pursuing. Vimal Kapur, appointed in 2023, had launched a formal portfolio review one year before the Elliott letter was filed. The board's February 2026 announcement was, in that sense, the conclusion of an internal process that external pressure accelerated rather than initiated.</p>
+
+    <h3>The Board's Decision Framework</h3>
+    <p>At the board level, approving a three-way separation requires satisfying several threshold questions simultaneously. The sum-of-the-parts analysis must demonstrate that separate valuations exceed the current consolidated multiple. IRS counsel must deliver an opinion confirming the distribution qualifies as tax-free under Section 355 of the Internal Revenue Code, protecting shareholders from recognizing gain at the point of distribution. Each resulting entity must demonstrate standalone viability with credible management teams, operating track records, and capital structures capable of sustaining investment-grade debt ratings. And the sequencing of financing must ensure that neither RemainCo nor SpinCo emerges from the transaction burdened by leverage that belongs to the other.</p>
+
+    <p>The transactions announced in March 2026 represent the board's resolution of every one of those questions.</p>
+  </div>
+</section>
+
+<!-- SECTION 2: THE THREE TRANSACTIONS -->
+<section id="transactions">
+  <div class="content-col">
+    <div class="section-label">Transaction Anatomy</div>
+    <h2>Three Transactions, One Strategic Objective</h2>
+    <p class="section-intro">
+      The spinoff, the debt issuance, and the tender offer are not independent events. Each is a necessary component of a single integrated capital structure realignment.
+    </p>
+
+    <div class="tx-grid">
+      <div class="tx-card">
+        <div class="tx-number">01</div>
+        <h4>Corporate Action</h4>
+        <strong>The Aerospace Spinoff</strong>
+        <p>Honeywell will distribute 100% of Honeywell Aerospace shares to existing HON shareholders on a pro rata, tax-free basis. Expected to close Q3 2026. Aerospace will trade on Nasdaq under the ticker HONA. The RemainCo, Honeywell Automation, retains three reporting segments: Building Automation, Industrial Automation, and Process Automation and Technology.</p>
+      </div>
+      <div class="tx-card">
+        <div class="tx-number">02</div>
+        <h4>Debt Capital Markets</h4>
+        <strong>$16 Billion Senior Notes Offering</strong>
+        <p>Honeywell Aerospace issued $16 billion in senior notes on March 16, 2026 under Rule 144A and Regulation S. The offering comprised $10 billion of "New Money Notes" and $6 billion of "Exchange Notes" across nine tranches, with maturities from 2028 to 2066. Notes carry a Honeywell parent guarantee until spinoff completion, at which point the guarantee releases automatically.</p>
+      </div>
+      <div class="tx-card">
+        <div class="tx-number">03</div>
+        <h4>Liability Management</h4>
+        <strong>Cash Tender Offer for HON Debt</strong>
+        <p>Honeywell commenced cash tender offers on March 6, 2026 for up to $3.75 billion of dollar-denominated notes and up to €1.25 billion of euro-denominated notes. Strong early participation prompted Honeywell to upsize the dollar tender to $4.67 billion. Dealer managers: BofA Securities, Goldman Sachs, and Morgan Stanley. Certain euro note series not tendered will be redeemed at par plus make-whole premium on April 10, 2026.</p>
+      </div>
+    </div>
+
+    <h3>The Relationship Between the Three Transactions</h3>
+    <p>The mechanics that bind these transactions are straightforward to follow. Honeywell Aerospace, as a wholly owned subsidiary, raises $10 billion in New Money Notes. Those proceeds flow upstream as a cash distribution to the Honeywell parent. The parent uses that cash, combined with borrowings under a new $3 billion term loan credit facility and cash on hand, to fund the tender offers and scheduled redemptions of its own outstanding debt. The Exchange Notes travel a different path: they are issued initially to Honeywell and transferred to the dealer managers, who use them to satisfy Honeywell's obligations under the 2026 Term Loan Credit Agreement.</p>
+
+    <p>The result is a systematic migration of debt from the parent balance sheet to the Aerospace subsidiary, and a reduction of the leverage that would otherwise encumber Honeywell Automation as a standalone entity. Both companies emerge from the separation with capital structures appropriate to their respective businesses.</p>
+
+    <div class="insight">
+      <div class="insight-label">Corporate Finance Note</div>
+      <p>The structure described above is known in corporate finance as a <strong>leveraged dividend recapitalization</strong> or, in the context of a separation, a <strong>spin-related recapitalization</strong>. The subsidiary borrows against its own assets and cash flow capacity, distributes the proceeds to the parent, and the parent uses those funds to reduce its consolidated leverage prior to the distribution. The combined liability management exercise, encompassing the issuance, the tender, and the scheduled redemptions, is referred to in the advisory context as a <strong>liability management transaction</strong> or LMT.</p>
+    </div>
+
+    <h3>The Tender Offer: Liability Management in Practice</h3>
+    <p>The tender offer targeted 17 series of dollar-denominated Honeywell senior notes with maturities between 2029 and 2054, and seven series of euro-denominated notes maturing between 2027 and 2036. Pricing was set by reference to U.S. Treasury benchmark yields plus a fixed spread, with early participation incentives for holders tendering by March 19, 2026. Withdrawal rights expired at 5:00 p.m. New York time on the early participation date. The offer expires April 7, 2026, unless extended or terminated by Honeywell. Any euro-denominated notes not tendered from the targeted redemption series will be called for mandatory redemption on April 10, 2026 at par plus make-whole premium plus accrued interest.</p>
+  </div>
+</section>
+
+<!-- SECTION 3: CAPITAL FLOW (DARK) -->
+<section id="capital-flow" class="section-dark">
+  <div class="content-col">
+    <div class="section-label">Capital Flow Analysis</div>
+    <h2>How the Capital Moves</h2>
+    <p class="section-intro">
+      The diagram below traces the movement of capital through the three-transaction sequence, from debt issuance at Aerospace to the retirement of legacy Honeywell obligations.
+    </p>
+
+    <div class="flow-wrapper">
+      <div class="flow-diagram">
+
+        <!-- Node 1 -->
+        <div class="flow-node accent">
+          <div class="node-label">Step 1 / Debt Capital Markets</div>
+          <div class="node-title">Honeywell Aerospace Inc. issues $16B in Senior Notes<br><small style="font-size:12px; color:rgba(255,255,255,0.65); font-family:'Source Sans 3',sans-serif;">Rule 144A / Reg S &nbsp;|&nbsp; Priced March 10, 2026 &nbsp;|&nbsp; Closed March 16, 2026<br>$10B New Money Notes + $6B Exchange Notes &nbsp;|&nbsp; Guaranteed by HON until spinoff</small></div>
+        </div>
+
+        <!-- Arrow -->
+        <div style="text-align:center; padding: 8px 0;">
+          <div class="flow-arrow-line" style="margin:0 auto; height:32px;"></div>
+          <div class="flow-arrow-label" style="margin-top:6px;">New Money Note proceeds flow upstream as cash distribution</div>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="flow-node">
+          <div class="node-label">Step 2 / Intercompany Distribution</div>
+          <div class="node-title">Honeywell International Inc. (Parent) receives ~$10B cash<br><small style="font-size:12px; color:rgba(255,255,255,0.65); font-family:'Source Sans 3',sans-serif;">Combined with: $3B Term Loan borrowings + Cash on hand</small></div>
+        </div>
+
+        <!-- Arrow split -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; padding: 8px 0; gap: 0;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div class="flow-arrow-line" style="height:24px;"></div>
+            <div class="flow-arrow-label" style="font-size:10px;">Cash Tender Offer</div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div class="flow-arrow-line" style="height:24px;"></div>
+            <div class="flow-arrow-label" style="font-size:10px;">Mandatory Redemptions</div>
+          </div>
+        </div>
+
+        <!-- Node 3 split -->
+        <div class="flow-split">
+          <div class="flow-node light">
+            <div class="node-label">Step 3a / Tender Offer</div>
+            <div class="node-title">Up to $4.67B USD &amp; up to €1.25B EUR<br><small style="font-size:11px; color:rgba(255,255,255,0.6); font-family:'Source Sans 3',sans-serif;">17 USD series / 7 EUR series<br>Expiry: April 7, 2026</small></div>
+          </div>
+          <div class="flow-node light">
+            <div class="node-label">Step 3b / Redemptions</div>
+            <div class="node-title">€650M 3.500% Notes<br>€750M 2.250% Notes<br><small style="font-size:11px; color:rgba(255,255,255,0.6); font-family:'Source Sans 3',sans-serif;">Called April 10, 2026<br>Par + make-whole premium</small></div>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div style="text-align:center; padding: 8px 0;">
+          <div class="flow-arrow-line" style="margin:0 auto; height:32px;"></div>
+          <div class="flow-arrow-label" style="margin-top:6px;">Legacy HON parent-level debt retired</div>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="flow-node gold">
+          <div class="node-label">Outcome / Balance Sheet</div>
+          <div class="node-title">RemainCo (Honeywell Automation) and SpinCo (Honeywell Aerospace) each carry standalone capital structures appropriate to their respective credit profiles and business risk</div>
+        </div>
+
+      </div>
+    </div>
+
+    <p style="color: var(--gray-500); font-size: 12px; margin-top: 8px; text-align:center;">Exchange Notes travel a separate path: issued to Honeywell, transferred to dealer managers (BofA, Goldman Sachs, Morgan Stanley), used to satisfy obligations under the 2026 Term Loan Credit Agreement.</p>
+
+    <h3>Why This Structure Was Chosen</h3>
+    <p style="color: var(--gray-300);">Honeywell had structural alternatives available. It could have retained more debt at the parent level. It could have used a cash distribution funded entirely from existing corporate facilities. It chose instead to capitalize Aerospace at market scale, using the subsidiary's own creditworthiness, because doing so accomplishes three things at once. It establishes Aerospace as a credible investment-grade borrower before it begins trading as an independent company. It removes the leverage overhang from Honeywell Automation. And it sends a clear signal to rating agencies, equity analysts, and bond markets that each entity is being sized appropriately for the business it will operate.</p>
+  </div>
+</section>
+
+<!-- SECTION 4: SHAREHOLDERS -->
+<section id="shareholders">
+  <div class="content-col">
+    <div class="section-label">Stakeholder Analysis</div>
+    <h2>Who Benefits and How</h2>
+    <p class="section-intro">
+      All Honeywell shareholders of record on the distribution date will receive HONA shares on a pro rata basis, tax-free. The institutional holders who carry the largest positions stand to benefit most from the valuation re-rating that a pure-play structure is expected to produce.
+    </p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Shareholder</th>
+          <th>Approx. Stake</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Vanguard Group</td><td>9.94%</td><td>Passive Index</td></tr>
+        <tr><td>J. Stern &amp; Co.</td><td>8.37%</td><td>Active Manager</td></tr>
+        <tr><td>BlackRock</td><td>8.28%</td><td>Passive Index</td></tr>
+        <tr><td>State Street</td><td>4.98%</td><td>Passive Index</td></tr>
+        <tr><td>Morgan Stanley</td><td>3.06%</td><td>Active / Prime Broker</td></tr>
+        <tr><td>Geode Capital Management</td><td>2.47%</td><td>Passive Index</td></tr>
+        <tr><td>Newport Trust</td><td>2.09%</td><td>Institutional</td></tr>
+        <tr><td>Wellington Management</td><td>2.01%</td><td>Active Manager</td></tr>
+        <tr><td>Franklin Resources</td><td>1.61%</td><td>Active Manager</td></tr>
+        <tr><td>Bank of America</td><td>1.43%</td><td>Active / Prime Broker</td></tr>
+        <tr><td>Elliott Investment Management</td><td>~2%+</td><td>Activist</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px; color: var(--gray-500); margin-top:-20px;">Sources: WallStreetZen, TIKR, Simply Wall St as of Q3 2025. Elliott stake per public disclosures; may have been reduced since initial November 2024 filing.</p>
+
+    <p>The ownership base is dominated by passive index funds, for which the spinoff creates an immediate operational requirement. Vanguard, BlackRock, and State Street collectively hold approximately 23% of shares outstanding. Upon distribution, each will receive HONA shares they did not elect to own. Passive funds tracking the S&P 500 or industrial indices will need to evaluate whether HONA is added to those indices and, if not, will be required to sell. This post-distribution index inclusion determination is a material event for the HONA float and will drive significant volume in the days immediately following the distribution.</p>
+
+    <div class="insight">
+      <div class="insight-label">Corporate Actions Note</div>
+      <p>For custodians and back-office operations teams, this event will require careful management of the distribution record date, the determination of fractional share treatment, and the coordination of position records across both HON and HONA. Passive holders receiving unsolicited HONA shares will generate sell orders that operations teams need to anticipate. Equally important: index funds that do include HONA in their benchmarks will need to rebalance both sides of the ledger simultaneously.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: TIMELINE -->
+<section id="timeline">
+  <div class="content-col">
+    <div class="section-label">Chronology</div>
+    <h2>The Full Arc of the Transaction</h2>
+    <p class="section-intro">
+      From the first public signal to the eventual 144A exchange offer, the sequence spans roughly three years. Each event in the chain is a prerequisite for the next.
+    </p>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">October 2024</div>
+        <div class="timeline-title">Advanced Materials Spinoff Announced</div>
+        <p class="timeline-desc">Honeywell announces intent to spin off its Advanced Materials business, later named Solstice Advanced Materials. The first formal signal of the board's portfolio simplification agenda.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">November 12, 2024</div>
+        <div class="timeline-title">Elliott Management Files $5B+ Position</div>
+        <p class="timeline-desc">Elliott discloses a position exceeding $5 billion in Honeywell and publishes a letter to the board arguing for a full separation of Aerospace and Automation. Honeywell stock moves to multi-year highs on the news.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">February 6, 2025</div>
+        <div class="timeline-title">Board Approves Full Separation</div>
+        <p class="timeline-desc">Following completion of a one-year portfolio review initiated by CEO Vimal Kapur, Honeywell's board approves the separation of Automation and Aerospace. The transaction is structured as a tax-free distribution to shareholders, targeted for completion in the second half of 2026.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">October 30, 2025</div>
+        <div class="timeline-title">Solstice Advanced Materials Begins Trading</div>
+        <p class="timeline-desc">The first of three separations closes. Solstice Advanced Materials becomes an independent publicly traded company, completing the advanced materials spinoff announced in October 2024.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">March 3, 2026</div>
+        <div class="timeline-title">Form 10 Filed with SEC</div>
+        <p class="timeline-desc">Honeywell Aerospace files its Form 10 registration statement, confirming $17.4 billion in 2025 pro forma net sales and $1.5 billion in net income. Aerospace's three-segment operating structure is detailed: Electronic Solutions; Engines and Power Systems; and Control Systems.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">March 6, 2026</div>
+        <div class="timeline-title">Tender Offer Launched / Notes Offering Commenced</div>
+        <p class="timeline-desc">Honeywell announces cash tender offers for up to $3.75B USD and €1.25B EUR of outstanding senior notes. Simultaneously, Honeywell Aerospace commences a private offering of up to $16 billion in senior notes under Rule 144A and Regulation S.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">March 10, 2026</div>
+        <div class="timeline-title">$16B Notes Offering Priced</div>
+        <p class="timeline-desc">Pricing confirmed across nine tranches with maturities from 2028 to 2066 and coupons ranging from 3.900% to 5.852%. Offering was oversubscribed. Indenture trustee appointed: Deutsche Bank Trust Company Americas.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot completed"></div>
+        <div class="timeline-tag tag-completed">Completed</div>
+        <div class="timeline-date">March 16, 2026</div>
+        <div class="timeline-title">Notes Issued / Registration Rights Agreement Executed</div>
+        <p class="timeline-desc">Aerospace closes the $16 billion notes offering. Honeywell executes the parent guarantee. The Registration Rights Agreement is executed between Aerospace and Morgan Stanley and Goldman Sachs as representatives of the initial purchasers. The 365-day clock for the exchange offer registration is contractually tied to spinoff consummation, not to this issuance date.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-tag tag-active">In Progress</div>
+        <div class="timeline-date">March 19 to April 7, 2026</div>
+        <div class="timeline-title">Tender Offer Early Participation / Expiration Window</div>
+        <p class="timeline-desc">Early participation deadline passed March 19, 2026, with $13.01B in dollar-denominated and €4.9B in euro-denominated notes tendered. Honeywell upsized the dollar tender to $4.67B in response to strong participation. Expiration date: April 7, 2026.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot future"></div>
+        <div class="timeline-tag tag-pending">Anticipated</div>
+        <div class="timeline-date">April 10, 2026</div>
+        <div class="timeline-title">Mandatory Redemptions of Remaining Euro Notes</div>
+        <p class="timeline-desc">Euro-denominated notes not tendered in the offers, specifically the €650M 3.500% and €750M 2.250% series, will be redeemed at par plus applicable make-whole premium plus accrued and unpaid interest.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot future"></div>
+        <div class="timeline-tag tag-pending">Anticipated</div>
+        <div class="timeline-date">Q3 2026</div>
+        <div class="timeline-title">Honeywell Aerospace Spinoff Consummated</div>
+        <p class="timeline-desc">HON shareholders of record receive HONA shares on a pro rata, tax-free basis. Honeywell Aerospace begins trading independently on Nasdaq under ticker HONA. The parent guarantee on the $16B senior notes releases automatically upon consummation. The 365-day clock on the Registration Rights Agreement begins.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot future"></div>
+        <div class="timeline-tag tag-pending">Anticipated</div>
+        <div class="timeline-date">Q3 2026 Onward</div>
+        <div class="timeline-title">Index Inclusion Determinations</div>
+        <p class="timeline-desc">S&P, Russell, and MSCI index committees evaluate HONA for benchmark inclusion. Passive fund rebalancing and any required sells of unsolicited distributions begin. This period will generate significant corporate actions volume across custodians globally.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot future"></div>
+        <div class="timeline-tag tag-pending">Anticipated</div>
+        <div class="timeline-date">By Q3 2027</div>
+        <div class="timeline-title">144A Exchange Offer Registration Filed</div>
+        <p class="timeline-desc">Per the Registration Rights Agreement dated March 16, 2026, Honeywell Aerospace must file a registration statement for an exchange offer or a shelf resale registration within 365 days of spinoff consummation. This converts the restricted 144A notes into freely tradeable, SEC-registered obligations carrying identical economic terms.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot future"></div>
+        <div class="timeline-tag tag-pending">Anticipated</div>
+        <div class="timeline-date">Mid to Late 2027</div>
+        <div class="timeline-title">Exchange Offer Completed: The 144A Becomes Registered</div>
+        <p class="timeline-desc">Eligible holders of the restricted 144A notes tender their restricted securities in exchange for newly issued registered notes with identical coupon, maturity, and ranking. The exchange offer is the event for which this entire sequence was prologue. It lands on corporate actions desks globally as a voluntary exchange, requiring position reconciliation, holder notification, and settlement across DTC and, for Regulation S holders, Euroclear and Clearstream.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: WHAT'S NEXT (DARK) -->
+<section id="whats-next" class="section-dark">
+  <div class="content-col">
+    <div class="section-label">Forward View</div>
+    <h2>What Comes Next</h2>
+    <p class="section-intro">
+      The transactions completed in March 2026 represent the financing layer of a larger separation. Four material events remain outstanding, each of which carries direct operational implications for market participants.
+    </p>
+
+    <div class="next-grid">
+      <div class="next-card step-1">
+        <h4>Event 1 / Q3 2026</h4>
+        <strong>Spinoff Consummation and First Trade of HONA</strong>
+        <p>Upon closing, Honeywell distributes all outstanding shares of Honeywell Aerospace to HON shareholders. HONA begins independent trading on Nasdaq. The parent guarantee on $16 billion of senior notes releases automatically and unconditionally. Custodians and prime brokers must be positioned to receive and allocate the distribution. DTC will process the distribution through its standard spinoff mechanics, but the scale of the event and the breadth of the institutional holder base will require early preparation.</p>
+      </div>
+      <div class="next-card step-2">
+        <h4>Event 2 / Q3 2026</h4>
+        <strong>Index Committee Reviews and Passive Rebalancing</strong>
+        <p>Following first trade, major index providers will determine whether HONA qualifies for inclusion in their benchmarks. For passive funds that held HON as part of an index, the treatment of the distribution depends entirely on whether HONA is added to the same index. Funds required to sell will generate concentrated volume in the days following the spinoff. This is a predictable operational pressure point for settlement desks and a potential liquidity event for HONA's early float.</p>
+      </div>
+      <div class="next-card step-3">
+        <h4>Event 3 / By Q3 2027</h4>
+        <strong>144A Exchange Offer Registration Statement Filed</strong>
+        <p>The Registration Rights Agreement requires Honeywell Aerospace to file an S-4 or F-4 registration statement with the SEC, or a shelf registration statement for resale, within 365 days of spinoff consummation. Once the exchange offer launches, holders of the restricted 144A notes will be invited to tender their existing securities in exchange for newly registered notes carrying identical economic terms. This is a standard but operationally significant event: the notes move from restricted CUSIP to a freely tradeable registered CUSIP, affecting trading eligibility, repo capacity, and index inclusion for fixed income benchmarks.</p>
+      </div>
+      <div class="next-card step-4">
+        <h4>Event 4 / Ongoing</h4>
+        <strong>Honeywell Automation as a Standalone Industrial Entity</strong>
+        <p>The RemainCo, trading under HON, will operate three segments: Building Automation, Industrial Automation, and Process Automation and Technology. Its capital structure will reflect a pure-play industrial profile, enabling more precise comparisons to peers such as Emerson Electric and Rockwell Automation. Rating agencies will conduct formal standalone credit assessments. HON's index weighting will be recalibrated to reflect a smaller, more focused entity. Corporate actions teams should monitor for any post-separation refinancing activity as management optimizes the Automation balance sheet independently.</p>
+      </div>
+    </div>
+
+    <div class="rule" style="background: var(--gold); margin: 40px 0;"></div>
+
+    <h3 style="color: var(--gold-light);">The Corporate Actions Perspective</h3>
+    <p style="color: var(--gray-300);">For professionals working in custody, settlement, and corporate actions operations, the Honeywell separation is not a single event. It is a sequence of events spanning from the tender offer settlements in April 2026, through the spinoff distribution processing in Q3 2026, to the index rebalancing flows, and ultimately to the 144A exchange offer that concludes the cycle in 2027. Each event in the chain feeds the next.</p>
+    <p style="color: var(--gray-300);">The tender offer, often perceived as a stand-alone corporate action, was in fact the first operational manifestation of a strategic decision taken at the board level in 2025. Understanding that context is what allows operations professionals to anticipate downstream events rather than simply react to notifications as they arrive. The 144A exchange offer in 2027 is entirely predictable from the moment the Registration Rights Agreement was signed on March 16, 2026. The details of that event are already contractually defined. What remains unknown is only the exact date.</p>
+
+    <div class="pull-quote" style="background: var(--navy-light);">
+      <p>A corporate actions event is rarely a beginning or an end. It is a point in a larger sequence. The value is in understanding the arc, not just the announcement.</p>
+      <cite>Analytical Framing / Ted Nawrocki</cite>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: SOURCES -->
+<section id="sources">
+  <div class="content-col">
+    <div class="section-label">Sources and Disclosure</div>
+    <h2>Primary Sources</h2>
+    <p class="section-intro">All factual claims in this analysis are drawn exclusively from public filings, official company press releases, and SEC EDGAR records.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Document</th><th>Source</th><th>Date</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Form 10 Registration Statement / Honeywell Aerospace Inc.</td>
+          <td>SEC EDGAR</td>
+          <td>March 3, 2026</td>
+        </tr>
+        <tr>
+          <td>8-K: Launch of Senior Notes Offering</td>
+          <td>SEC EDGAR / Honeywell IR</td>
+          <td>March 6, 2026</td>
+        </tr>
+        <tr>
+          <td>8-K: Commencement of Cash Tender Offers</td>
+          <td>SEC EDGAR / Honeywell IR</td>
+          <td>March 6, 2026</td>
+        </tr>
+        <tr>
+          <td>8-K: Pricing of Senior Notes</td>
+          <td>SEC EDGAR / PR Newswire</td>
+          <td>March 10, 2026</td>
+        </tr>
+        <tr>
+          <td>8-K: Closing of Senior Notes / Registration Rights Agreement</td>
+          <td>SEC EDGAR</td>
+          <td>March 16, 2026</td>
+        </tr>
+        <tr>
+          <td>Board Portfolio Review Announcement</td>
+          <td>Honeywell.com / PR Newswire</td>
+          <td>February 6, 2025</td>
+        </tr>
+        <tr>
+          <td>Elliott Investment Management Letter to Board</td>
+          <td>Public disclosure / CNBC</td>
+          <td>November 12, 2024</td>
+        </tr>
+        <tr>
+          <td>Institutional Ownership Data (HON)</td>
+          <td>WallStreetZen / TIKR / Simply Wall St</td>
+          <td>Q3 2025 to March 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-credit">
+      <strong>Prepared by Ted Nawrocki</strong>
+      <span>Senior Manager, Corporate Actions &amp; Capital Markets Operations</span>
+    </div>
+    <a class="linkedin-link" href="https://www.linkedin.com/in/tednawrockinyc/" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      Connect on LinkedIn
+    </a>
+  </div>
+  <div class="footer-inner">
+    <p class="footer-disclaimer">
+      This document is prepared for informational and educational purposes only. It does not constitute investment advice, a solicitation, or an offer to buy or sell any security. All information is sourced from publicly available documents including SEC filings, company press releases, and disclosed regulatory submissions. The views expressed represent the author's independent analysis and do not represent the views of any employer, client, or affiliated institution. Readers should conduct their own due diligence and consult qualified advisors before making any investment or operational decisions.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
